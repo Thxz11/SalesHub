@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesHub - Cursos e E-books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SalesHub</h1>
+        <nav>
+            <ul>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#ebooks">E-books</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cursos">
+            <h2>Cursos</h2>
+            <div class="product">
+                <h3>Curso de Marketing Digital</h3>
+                <p>R$ 199,00</p>
+                <button onclick="adicionarAoCarrinho('Curso de Marketing Digital', 199)">Adicionar ao carrinho</button>
+            </div>
+            <!-- Mais cursos -->
+        </section>
+
+        <section id="ebooks">
+            <h2>E-books</h2>
+            <div class="product">
+                <h3>E-book: Como Investir em Ações</h3>
+                <p>R$ 49,00</p>
+                <button onclick="adicionarAoCarrinho('E-book: Como Investir em Ações', 49)">Adicionar ao carrinho</button>
+            </div>
+            <!-- Mais e-books -->
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items"></div>
+            <p>Total: R$ <span id="cart-total">0</span></p>
+            <button id="checkout-button">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+let carrinho = [];
+let total = 0;
+
+function adicionarAoCarrinho(produto, preco) {
+    carrinho.push({ produto, preco });
+    total += preco;
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+    let cartItems = document.getElementById('cart-items');
+    let cartTotal = document.getElementById('cart-total');
+    
+    cartItems.innerHTML = '';
+    carrinho.forEach(item => {
+        cartItems.innerHTML += <p>${item.produto} - R$ ${item.preco}</p>;
+    });
+    
+    cartTotal.textContent = total;
+}
+
+document.getElementById('checkout-button').addEventListener('click', () => {
+    // Integração com sistema de pagamento
+    alert('Compra finalizada! Total: R$ ' + total);
+});
